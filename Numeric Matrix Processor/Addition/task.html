@@ -1,0 +1,72 @@
+<h2 style="text-align: center;">Description</h2>
+
+<p>Matrices can be presented in code like 2D-arrays. They have many cases where they can be applied: digital image processing, graph representation, and algorithms on a graph, drawing graphics, graphics effects, applied maths, statistics, physics and much more.</p>
+
+<p>The matrix general form looks like this:</p>
+
+<p>                                                              <span class="math-tex">\(A_{N,M} = \begin{pmatrix} A_{1,1} &amp; ... &amp; ... &amp; A_{1,m} \\ A_{2,1} &amp; ... &amp; ... &amp; A_{2,m} \\ ... &amp; ... &amp; ... &amp; ... \\ A_{n,1} &amp; ... &amp; ... &amp; A_{n,m} \end{pmatrix}\)</span></p>
+
+<p>As you can see, it contains N rows and M columns.</p>
+
+<p>Let’s start with adding matrices.</p>
+
+<p>Two matrices must have an equal number of rows and columns to be added. The sum of two matrices <span class="math-tex">\(A\)</span> and <span class="math-tex">\(B\)</span> will be a matrix which has the same number of rows and columns as do <span class="math-tex">\( A \)</span> and <span class="math-tex">\( B \)</span>. The sum of <span class="math-tex">\( A \)</span> and <span class="math-tex">\( B \)</span>, denoted <span class="math-tex">\( A + B \)</span> or <span class="math-tex">\( B + A \)</span>, is computed by adding corresponding elements of <span class="math-tex">\( A \)</span> and <span class="math-tex">\( B \)</span>: <span class="math-tex">\( A_{i \times j} + B_{i \times j} \)</span>. Notice that the first element in the index <span class="math-tex">\( i \times j \)</span> represents a number of rows, the second represents a number of columns. The general formula for adding two matrices are shown below:</p>
+
+<p><span class="math-tex">\(P_{m,n} + Q_{m,n} = \begin{pmatrix} p_{1,1} &amp; p_{1,2} &amp;p_{1,3} &amp; ... &amp; p_{1,n} \\ p_{2,1} &amp; p_{2,2} &amp;p_{2,3} &amp; ... &amp; p_{2,n} \\ p_{3,1} &amp; p_{3,2} &amp;p_{3,3} &amp; ... &amp; p_{3,n} \\ ... &amp; ... &amp; ... &amp; ... &amp; ... \\ p_{m,1} &amp; p_{m,2} &amp;p_{m,3} &amp; ... &amp; p_{m,n} \end{pmatrix} + \begin{pmatrix} q_{1,1} &amp; q_{1,2} &amp;q_{1,3} &amp; ... &amp; q_{1,n} \\ q_{2,1} &amp; q_{2,2} &amp;q_{2,3} &amp; ... &amp; q_{2,n} \\ q_{3,1} &amp; q_{3,2} &amp;q_{3,3} &amp; ... &amp; q_{3,n} \\ ... &amp; ... &amp; ... &amp; ... &amp; ... \\ q_{m,1} &amp; q_{m,2} &amp;q_{m,3} &amp; ... &amp; q_{m,n} \end{pmatrix} \)</span></p>
+
+<p>                                     <span class="math-tex">\(= \begin{pmatrix} p_{1,1} +q_{1,1}&amp; p_{1,2} +q_{1,2}&amp;p_{1,3} +q_{1,3}&amp; ... &amp; p_{1,n} +q_{1,n} \\ p_{2,1} +q_{2,1} &amp; p_{2,2}+ q_{2,2}&amp;p_{2,3}+q_{2,3} &amp; ... &amp; p_{2,n} +q_{2,n}\\ p_{3,1} +q_{3,1} &amp; p_{3,2} +q_{3,2}&amp;p_{3,3} +q_{3,3}&amp; ... &amp; p_{3,n} +q_{3,n} \\ ... &amp; ... &amp; ... &amp; ... &amp; ... \\ p_{m,1}+ q_{m,1}&amp; p_{m,2} +q_{m,2} &amp;p_{m,3}+q_{m,3} &amp; ... &amp; p_{m,n} +q_{m,n} \end{pmatrix} \)</span>   </p>
+
+<p> </p>
+
+<p>Here is the example with numbers:</p>
+
+<p>                          <span class="math-tex">\(\begin{pmatrix} 2 &amp; 4 &amp;5 &amp; 6 \\ 6 &amp; 6 &amp;7 &amp; 8 \\ 5 &amp; 0 &amp;0 &amp; 1 \\ 8 &amp; 8 &amp;2 &amp; 9 \\ \end{pmatrix} +\begin{pmatrix} 7 &amp; 7 &amp;0 &amp; 1 \\ 9 &amp; 9 &amp;9 &amp; 2 \\ 5 &amp; 4 &amp;3 &amp; 12 \\ 0 &amp; 6 &amp;5 &amp; 6 \\ \end{pmatrix} = \begin{pmatrix} 2+7 &amp; 4+7 &amp;5+0 &amp; 6+1 \\ 6+9 &amp; 6+9 &amp;7+9 &amp; 8+2 \\ 5+5 &amp; 0+4 &amp;0+3 &amp; 1+12 \\ 8+0 &amp; 8+6 &amp;2+5 &amp; 9+6 \\ \end{pmatrix} \)</span></p>
+
+<p>In this stage, you should write a program that output sum of <span class="math-tex">\( A \)</span> and <span class="math-tex">\( B \)</span> matrices.</p>
+
+<p>The first line of standard input is a number of rows N and number of columns M of <span class="math-tex">\( A \)</span> matrix. Next N lines are <span class="math-tex">\( A \)</span> matrix’s elements. Next line after empty line is a number of rows N and number of columns M of <span class="math-tex">\( B \)</span> matrix. Next N lines are <span class="math-tex">\( B \)</span> matrix’s elements.</p>
+
+<p>You should output the result of a sum of A and B matrices or <code>ERROR</code> message if it’s impossible. Input contains only integers.</p>
+
+<h2 style="text-align: center;">Examples</h2>
+
+<p><strong>Example 1</strong></p>
+
+<p>Input:</p>
+
+<pre><code class="language-no-highlight">4 5
+1 2 3 4 5
+3 2 3 2 1
+8 0 9 9 1
+1 3 4 5 6
+4 5
+1 1 4 4 5
+4 4 5 7 8
+1 2 3 9 8
+1 0 0 0 1</code></pre>
+
+<p>Output:</p>
+
+<pre><code class="language-no-highlight">2 3 7 8 10
+7 6 8 9 9
+9 2 12 18 9
+2 3 4 5 7</code></pre>
+
+<p><strong>Example 2</strong></p>
+
+<p>Input:</p>
+
+<pre><code class="language-no-highlight">2 3
+1 4 5
+4 5 5
+4 5
+0 1 0 4 5
+1 7 8 9 4
+1 2 3 5 6
+1 3 4 3 8</code></pre>
+
+<p>Output:</p>
+
+<pre><code class="language-no-highlight">ERROR</code></pre>
+
+<p>[ALERT-primary]Do not use <code>readLine()</code> to read data from the input stream, but better use <code>Scanner</code>. Checking solutions that use <code>readLine()</code> does not work yet.[/ALERT]</p>
